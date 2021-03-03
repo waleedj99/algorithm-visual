@@ -1,7 +1,4 @@
-// "*LETS KEEP IT DARK MODE*"
-//import bubble_Sort from '/bs.js'
-// client-side js
-// run by the browser each time your view template is loaded
+
 let oldSize = 0;
 let newSize = 0;
 let oldGridSize = 0;
@@ -77,7 +74,7 @@ async function insertionSort(arr) {
 
   return arr;
 }
-//console.log(insertionSort([7, 8, 5, 2, 4, 6, 3]));
+
 
 function enableInput() {
   var to_disable_elems = document.getElementsByClassName("to-disable");
@@ -115,8 +112,7 @@ $(document).ready(function() {
     }
     //
     var currentSelection = document.getElementById("select_dropdown").value;
-    //console.log(document.getElementById("select_dropdown").value);
-    //bubble_sort_beta(randArr);
+    
     if (currentSelection == "bubble_sort") {
       new_bubble_sort(randArr).then(() => {
         enableInput();
@@ -126,17 +122,7 @@ $(document).ready(function() {
         enableInput();
       });
     }
-    //to_disable_elems = document.getElementsByClassName("to-disable")
-    //document.getElementById("sort").innerHTML = "SORT";
-    //document.getElementById("sort").style.backgroundColor = "blue";
-    // for(let i =0;i<to_disable_elems.length;i++){
-    //     to_disable_elems[i].style.pointerEvents =  "all";//style.display = "none";
-    //   }
-    // bubble_Sort(randArr);
-
-    // insertionSort(randArr);
-
-    //bubble_Sort(randArr)
+    
   });
 });
 
@@ -156,26 +142,12 @@ function generateGraphWithArgs(arr) {
     allBars[i].height = arr[i];
   }
 
-  // $("#graph").html(
-  //     '<div id="fixed" style="height:' +
-  //       parseInt(maxHeight + 1) +
-  //       'em;width:0.4px"></div>'
-  //   );
-  //   arr.forEach(element => {
-  //       $("#graph").append(
-  //         '<div class="bar" id="bar' +
-  //           index++ +
-  //           '" style="height:' +
-  //           element +
-  //           'em"></div>'
-  //       );
-  //     });
+  
 }
 
 function generateGraph() {
   newSize = $("#size_input").val();
-  // console.log(oldSize);
-  //console.log("a" + newSize);
+  
 
   if (newSize != oldSize) {
     isSorting = false;
@@ -199,7 +171,7 @@ function generateGraph() {
           'em"></div></div>'
       );
     });
-    //console.log(randArr)
+    
     oldSize = newSize;
   } else {
     isSorting = true;
@@ -213,7 +185,7 @@ function changeColor(e) {
 
   color = `rgb(${red},${green},${blue})`;
   e.target.style.backgroundColor = "black";
-  //colorCount += 0.10;
+  
 }
 function generateGrid() {
   mainDiv = $("#pathf_graph table");
@@ -227,7 +199,7 @@ function generateGrid() {
       for (var j = 0; j < gridSize * 4; j++) {
         const newDiv = document.createElement("td");
         newDiv.className = "grid";
-        //newDiv.innerText = i + ' ' + j;
+        s
         rowDiv.append(newDiv);
       }
       mainDiv.append(rowDiv);
